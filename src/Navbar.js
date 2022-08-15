@@ -24,7 +24,7 @@ const Navbar = () => {
         }
     }
 
-    const showSubLink = (e) => {
+    const showSubLink = () => {
         if (window.innerWidth >= 990){
             setShowSubmenu(true);
             const subLink = document.querySelector('.sub-link');

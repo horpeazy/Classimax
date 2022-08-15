@@ -163,7 +163,7 @@ nav {
     display: none;
     flex-direction: column;
     max-height: 0px;
-    transition: .3 all ease-in-out;
+    transition: .5s all ease-in-out;
     overflow: hidden;
 }
 
@@ -325,7 +325,6 @@ li a:hover {
         width: 12rem;
         transform: translateX(-50%);
         border: 1px solid var(--clr-clm-grey-light);
-        transition: all 3s linear;
     }
 
     .arrow {
