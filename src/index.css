@@ -265,7 +265,8 @@ li a:hover {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 2rem;
+        padding-left: 0rem;
     }
 
     .toggle-icon {
