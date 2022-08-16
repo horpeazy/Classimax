@@ -52,73 +52,73 @@ Variables
   ===============
   */
   
-  *,
-  ::after,
-  ::before {
+*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  body {
+}
+body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.5;
     font-size: 0.875rem;
     background: var(--clr-grey-10);
-  }
-  ul {
+}
+ul {
     list-style-type: none;
-  }
-  a {
+}
+a {
     text-decoration: none;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
+}
+h1,
+h2,
+h3,
+h4 {
     letter-spacing: var(--spacing);
     text-transform: capitalize;
     line-height: 1.25;
     margin-bottom: 0.75rem;
-  }
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
+}
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
     font-size: 2rem;
-  }
-  h3 {
+}
+h3 {
     font-size: 1.25rem;
-  }
-  h4 {
+}
+h4 {
     font-size: 0.875rem;
-  }
-  p {
+}
+p {
     margin-bottom: 1.25rem;
     color: var(--clr-grey-5);
-  }
-  @media screen and (min-width: 990px) {
+}
+@media screen and (min-width: 990px) {
     h1 {
-      font-size: 4rem;
+        font-size: 4rem;
     }
     h2 {
-      font-size: 2.5rem;
+        font-size: 2.5rem;
     }
     h3 {
-      font-size: 1.75rem;
+        font-size: 1.75rem;
     }
     h4 {
-      font-size: 1rem;
+        font-size: 1rem;
     }
     body {
-      font-size: 1rem;
+        font-size: 1rem;
     }
     h1,
     h2,
     h3,
     h4 {
-      line-height: 1;
+        line-height: 1;
     }
-  }
+}
 
 /*
     =============== 
@@ -160,7 +160,6 @@ nav {
 }
 
 .dropdown {
-    display: none;
     flex-direction: column;
     max-height: 0px;
     transition: .5s all ease-in-out;
@@ -254,6 +253,119 @@ li a:hover {
     cursor: pointer;
 }
 
+.hero {
+    background-image: url(./images/home/hero.jpg);
+    background-color: rgba(0, 0, 0, 0.51);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 45rem;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 100px 5px 0;
+}
+
+/* .overlay::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.51);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} */
+
+.popular-category h2{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.popular-category-list li {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 1px;
+}
+
+.popular-category li a {
+    border: 1px solid #404040;
+    color: #c1c1c1;
+    font-weight: 200;
+    padding: 4px 10px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.popular-category-list {
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    padding-inline-start: 40px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding: 0 40px;
+    text-align: center !important;
+    line-height: 1.5;
+}
+
+.hero p {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 80px);
+    background-color: white;
+    padding: 40px 15px 25px 15px;
+    border-radius: 3px;
+    box-shadow: -1px 3px 6px rgb(0 0 0 / 12%);
+}
+
+.form-control{
+    border-radius: 2px;
+    height: 50px;
+    color: #666;
+    box-shadow: none;
+    font-size: 15px;
+    width: 100%;
+    border: 1px solid #ced4da;
+    overflow: visible;
+    margin: 10px auto;
+    padding: 0 10px;
+}
+
+
+.search-form button {
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    width: 100%;
+    cursor: pointer;
+}
+
 /*
     =============== 
     Desktop Styles
@@ -313,6 +425,7 @@ li a:hover {
         justify-content: space-between;
         flex-basis: 75%;
         overflow: visible;
+        z-index: 2;
     }
 
     .link {
@@ -330,6 +443,29 @@ li a:hover {
 
     .arrow {
         display: none;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .search-form {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr auto;
+        gap: 10px;
+        transform: translate(-50%, 50%);
+    }
+
+    .search-form button {
+        width: auto;
+    }
+
+    .form-control {
+        width: 100%;
     }
 }
 
