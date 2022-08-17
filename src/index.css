@@ -60,7 +60,7 @@ Variables
     box-sizing: border-box;
 }
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     line-height: 1.5;
     font-size: 0.875rem;
     background: var(--clr-grey-10);
@@ -99,6 +99,7 @@ p {
 @media screen and (min-width: 990px) {
     h1 {
         font-size: 4rem;
+        letter-spacing: 0.05em;
     }
     h2 {
         font-size: 2.5rem;
@@ -116,7 +117,7 @@ p {
     h2,
     h3,
     h4 {
-        line-height: 1;
+        line-height: 1.2;
     }
 }
 
@@ -255,6 +256,7 @@ li a:hover {
 
 .hero {
     background-image: url(./images/home/hero.jpg);
+    background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.51);
     background-size: cover;
     background-repeat: no-repeat;
@@ -265,16 +267,6 @@ li a:hover {
     color: white;
     padding: 100px 5px 0;
 }
-
-/* .overlay::before {
-    content: '';
-    background: rgba(0, 0, 0, 0.51);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-} */
 
 .popular-category h2{
     font-size: 14px;
@@ -361,9 +353,9 @@ li a:hover {
     border-radius: 4px;
     color: #fff;
     background-color: #007bff;
-    border-color: #007bff;
     width: 100%;
     cursor: pointer;
+    border: none;
 }
 
 /*
@@ -418,6 +410,10 @@ li a:hover {
         flex-basis: 66.7%;
     }
 
+    .hero {
+        min-height: 75vh;
+    }
+
     .dropdown {
         display: flex;
         max-height: auto !important;
@@ -445,12 +441,9 @@ li a:hover {
         display: none;
     }
 
-    .hero {
-        min-height: 75vh;
-    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px){
     .search-form {
         flex-direction: row;
         justify-content: space-between;
@@ -466,6 +459,22 @@ li a:hover {
 
     .form-control {
         width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .hero {
+        min-height: 40vh;
+    }
+}
+
+@media (min-width: 912px) and (max-width: 990px){
+    .hero-content h1 {
+        font-size: 65px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
     }
 }
 
@@ -496,6 +505,12 @@ li a:hover {
         height: 7%;
         padding: 0;
         border: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .popular-category-list li {
+        margin-top: 0.2rem;
     }
 }
 
