@@ -63,7 +63,7 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     line-height: 1.5;
     font-size: 0.875rem;
-    background: var(--clr-grey-10);
+    background: #F5F5F5;
 }
 ul {
     list-style-type: none;
@@ -358,6 +358,136 @@ li a:hover {
     border: none;
 }
 
+.add {
+    margin: 100px 2rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.add h2 {
+    font-size: 30px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+}
+
+.add p{
+    margin-bottom: 1rem;
+    color: #848484;
+}
+
+.slider-indicator {
+    height: 5px;
+    width: 40px;
+    background-color: #5672f9;
+    margin: auto;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+
+.slider-indicator::before,
+.slider-indicator::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 127px;
+    background-color: #e0e0e0;
+}
+
+.slider-indicator::before {
+    transform: translateX(-100%);
+}
+
+.slider-indicator::after {
+    transform: translateX(100%);
+}
+
+.slider {
+    height: 35rem;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    text-align: left;
+}
+
+.slide-content {
+    padding: 20px;
+    color: #777;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#name {
+    font-weight: 700;
+    font-size: 18px;
+    color: black;
+    margin: 0;
+}
+
+#description {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 26rem;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    transition: .3s all linear;
+    background-color: white;
+}
+
+.second, .last, .next {
+    translate: calc(100% + 25px);
+    opacity: 0;
+}
+
+.prev {
+    translate: calc(-110%);
+    opacity: 0;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    max-height: 50%;
+}
+
+.category, .date {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    color: var(--clr-clm-grey-dark);
+}
+
+.checked {
+    color: #5672f9;
+}
+
+.fa {
+    padding: 2px;
+    font-size: 18px;
+}
+
+.small-fa {
+    font-size: 12px;
+    color: #888;
+    margin-right: 4px;
+}
+
+#rating {
+    position: absolute;
+    bottom: 20px;
+}
+
 /*
     =============== 
     Desktop Styles
@@ -440,6 +570,24 @@ li a:hover {
     .arrow {
         display: none;
     }
+    
+    .next {
+        translate: calc(300% + 75px);
+    }
+
+    .last {
+        translate: calc(200% + 50px);
+        opacity: 1;
+    }
+
+    .second{
+        translate: calc(100% + 25px);
+        opacity: 1;
+    }
+
+    .slide {
+        width: calc(32% - 2px);
+    }
 
 }
 
@@ -460,11 +608,30 @@ li a:hover {
     .form-control {
         width: 100%;
     }
+
+    .add {
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 990px) {
     .hero {
         min-height: 40vh;
+    }
+}
+
+@media (min-width: 479px) and (max-width: 990px){
+    .slide {
+        width: 48.5%;
+    }
+
+    .last, .next {
+        translate: calc(200% + 50px);
+    }
+
+    .second {
+        opacity: 1;
     }
 }
 
