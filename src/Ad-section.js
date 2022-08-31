@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { data } from './data'
 
-const Add = () => {
+const Ad = () => {
     const [first, setFirst] = useState(1);
     const lastIndex = data.length;
     useEffect(() => {
@@ -20,7 +20,7 @@ const Add = () => {
     }, [lastIndex])
     
     return (
-        <section className='add'>
+        <section className='ad-section'>
             <h2>Trending Adds</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur 
@@ -75,4 +75,4 @@ const Add = () => {
     )
 }
 
-export default Add;
+export default Ad;

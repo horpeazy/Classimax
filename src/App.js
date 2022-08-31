@@ -1,14 +1,20 @@
 import React from "react";
-import Navbar from './Navbar'
-import Hero from './Hero'
-import Add from './Adds'
+import Navbar from './Navbar';
+import Hero from './Hero';
+import Ad from './Ad-section';
+import Category from './Categories';
+import CallToAction from './Call-to-action';
+import Footer from './Footer';
 
 const App = () => {
     return(
         <React.Fragment>
             <Navbar />
             <Hero />
-            <Add />
+            <Ad />
+            <Category />
+            <CallToAction />
+            <Footer />
         </React.Fragment>
         
     )
