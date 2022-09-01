@@ -245,7 +245,8 @@ li a:hover, li:hover {
 }
 
 .arrow {
-    padding: 2px 3px;
+    transform: translate(5px, 2px)!important;
+    display: inline-block;
 }
 
 .btn {

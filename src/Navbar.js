@@ -55,8 +55,7 @@ const Navbar = () => {
                                 onMouseLeave={() => {setShowSubmenu(false)}}
                             >
                                 <li onClick={menuHandler}>
-                                    Listing
-                                    <span><i className='fa fa-angle-down' /></span>
+                                    Listing<i className='fa fa-angle-down arrow' />
                                 </li>
                                 <ul 
                                     className={`sub-link ${showSubmenu && 'show'}`}
