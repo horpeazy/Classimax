@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { FaBars, FaArrowCircleDown, FaPlusCircle} from 'react-icons/fa';
+import { FaBars, FaPlusCircle} from 'react-icons/fa';
 import logo from './images/logo.png'
 
 const Navbar = () => {
@@ -54,10 +54,10 @@ const Navbar = () => {
                                 onMouseOver={showSubLink} 
                                 onMouseLeave={() => {setShowSubmenu(false)}}
                             >
-                                <a onClick={menuHandler} href='/'>
+                                <li onClick={menuHandler}>
                                     Listing
-                                    <FaArrowCircleDown className='arrow' />
-                                </a>
+                                    <span><i className='fa fa-angle-down' /></span>
+                                </li>
                                 <ul 
                                     className={`sub-link ${showSubmenu && 'show'}`}
                                 >

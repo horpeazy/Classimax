@@ -173,6 +173,10 @@ nav {
     align-items: center;
 }
 
+.nav-center li {
+    cursor: pointer;
+}
+
 .nav-links {
     text-align: center;
     width: 100%;
@@ -185,7 +189,7 @@ nav {
     flex-direction: column;
 }
 
-li a:hover {
+li a:hover, li:hover {
     color: blue;
 }
 
