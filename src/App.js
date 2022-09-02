@@ -1,22 +1,22 @@
 import React from "react";
-import Navbar from './Navbar';
-import Hero from './Hero';
-import Ad from './Ad-section';
-import Category from './Categories';
-import CallToAction from './Call-to-action';
-import Footer from './Footer';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import pages
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+// import components
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
     return(
-        <React.Fragment>
+        <Router>
             <Navbar />
-            <Hero />
-            <Ad />
-            <Category />
-            <CallToAction />
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/contact' element={<Contact />} />
+            </Routes>
             <Footer />
-        </React.Fragment>
-        
+        </Router>      
     )
 }
 

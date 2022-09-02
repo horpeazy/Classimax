@@ -797,6 +797,77 @@ li a:hover, li:hover {
     color: white;
 }
 
+.contact-wrapper {
+    padding: 7rem 2rem;
+}
+
+.contact-section {
+    background-color: #fff;
+}
+
+.contact-header {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0px;
+    background-color: #5672f9;
+    color: #fff;
+}
+
+.contact h5 {
+    font-size: 20px;
+    color: #333;
+}
+
+.contact h2 {
+    padding: 1rem 0;
+    color: #333;
+    line-height: 1.2;
+}
+
+.contact p {
+    color: #888;
+    padding: 1rem 0 4rem;
+}
+
+.contact-form .form-group {
+    margin: 20px 0;
+    display: flex;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form .c-form-control {
+    width: 100%;
+    height: 50px;
+    color: #666;
+    border-radius: 2px;
+    font-size: 15px;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    padding: 5px 10px;
+    font-weight: 400 !important;
+}
+
+.contact-btn {
+    margin-left: auto;
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 4px;
+    margin-top: 0.5rem!important;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+}
+
+textarea {
+    height: auto !important;
+}
 /*
     =============== 
     Desktop Styles
@@ -916,6 +987,19 @@ li a:hover, li:hover {
         margin-right: 10rem;
     }
 
+    .nm-flex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .nm-flex .form-group {
+        margin: 10px 0;
+    }
+
+    .contact h2 {
+        font-size: 56px;
+    }
 }
 
 @media (min-width: 768px){
@@ -966,6 +1050,16 @@ li a:hover, li:hover {
         grid-area: z;
     }
 
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+    .contact-wrapper {
+        padding: 7rem 6rem;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 990px) {
@@ -990,6 +1084,10 @@ li a:hover, li:hover {
 
     .footer-bottom li {
         padding: 0 10px;
+    }
+
+    .contact-wrapper {
+        padding: 7rem 6rem;
     }
 }
 

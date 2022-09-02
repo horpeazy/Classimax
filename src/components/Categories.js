@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { category_list } from './data';
+import { category_list } from '../data';
 
 const Category = () => {
     const defaultShow = (window.innerWidth > 375) ? true : false

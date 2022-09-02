@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FaBars, FaPlusCircle} from 'react-icons/fa';
-import logo from './images/logo.png'
+import logo from '../images/logo.png';
 
 const Navbar = () => {
     const [showSubmenu, setShowSubmenu] = useState(false);
@@ -38,16 +39,16 @@ const Navbar = () => {
         <nav>
             <div className='navbar-wrapper'>
                <div className='nav-header'>
-                    <a href='/' className='logo'>
+                    <Link to='/' className='logo'>
                         <img src={logo} alt='logo'/>
-                    </a>
+                    </Link>
                     <FaBars className='toggle-icon' onClick={setDropdown}/>
                 </div>
                 <div className='dropdown' ref={dropDown}>
                     <div className='nav-center'>
                         <ul className='nav-links'>
                             <li className='link'>
-                                <a href='/'>Home</a>
+                                <Link to='/'>Home</Link>
                             </li>
                             <li className='link' 
                                 ref={linkElement}
@@ -71,7 +72,7 @@ const Navbar = () => {
                                 <a href='/'>About</a>
                             </li>
                             <li className='link'>
-                                <a href='/'>Contact</a>
+                                <Link to='/contact'>Contact</Link>
                             </li>
                         </ul>
                     </div>
