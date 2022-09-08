@@ -139,3 +139,26 @@ export const category_list = [
         ]
     }
 ]
+
+export const feedbackData = [
+    {
+        icon: 'fa-smile-o',
+        category: 'Happy Sellers',
+        value: 407
+    },
+    {
+        icon: 'fa-user-o',
+        category: 'Active Members',
+        value: 200
+    },
+    {
+        icon: 'fa-bookmark-o',
+        category: 'Verified Ads',
+        value: 126
+    },
+    {
+        icon: 'fa-smile-o',
+        category: 'Happy Buyers',
+        value: 84
+    }
+]

@@ -55,6 +55,7 @@ const Navbar = () => {
                                 onMouseOver={showSubLink} 
                                 onMouseLeave={() => {setShowSubmenu(false)}}
                             >
+                                {/* TODO: change list to another element */}
                                 <li onClick={menuHandler}>
                                     Listing<i className='fa fa-angle-down arrow' />
                                 </li>
@@ -69,7 +70,7 @@ const Navbar = () => {
                                 </ul>
                             </li>
                             <li className='link'>
-                                <a href='/'>About</a>
+                                <Link to='/about'>About</Link>
                             </li>
                             <li className='link'>
                                 <Link to='/contact'>Contact</Link>

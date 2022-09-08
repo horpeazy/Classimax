@@ -260,7 +260,7 @@ li a:hover, li:hover {
 }
 
 .hero {
-    background-image: url(./images/home/hero.png);
+    background-image: url(./images/home/hero.jpg);
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.51);
     background-size: cover;
@@ -868,6 +868,129 @@ li a:hover, li:hover {
 textarea {
     height: auto !important;
 }
+
+.about-header {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0px;
+    background-color: #5672f9;
+    color: #fff;
+}
+
+.about-main {
+    padding: 0 2rem;
+
+}
+
+.about-team h2 {
+    margin-bottom: 4rem;
+    font-size: 25px;
+}
+
+.about-image-wrapper {
+    margin-bottom: 40px;
+}
+
+.about-image-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.about-section {
+    background-color: #fff;
+}
+
+.about-intro {
+    padding: 100px 0;
+}
+
+.about-intro p {
+    color: #888;
+    line-height: 30px;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.about-intro h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.about-team {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+
+.profile {
+    background-color: #F5F5F5;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: .25rem;
+}
+
+.profile h4 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.profile p {
+    color: #888;
+    font-size: 14px;
+}
+
+.profile img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.profile-title {
+    padding: 10px 0;
+}
+
+.feedback {
+    text-align: center;
+    padding: 1.5rem 0 !important;
+    background-color: #f8f9fa!important;
+    border-radius: 0.25rem;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.feedback i {
+    font-size: 60px;
+    color: #5672f9;
+    display: block;
+}
+
+.feedback span {
+    display: block !important;
+    font-size: 24px;
+    margin-bottom: 0.5rem 0 !important;
+}
+
+.feedback h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.about-section-review {
+    background-color: #F5F5F5;
+    padding: 100px 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
 /*
     =============== 
     Desktop Styles
@@ -946,10 +1069,6 @@ textarea {
         transform: translateX(-50%);
         border: 1px solid var(--clr-clm-grey-light);
     }
-
-    .arrow {
-        display: none;
-    }
     
     .next {
         translate: calc(300% + 75px);
@@ -999,6 +1118,20 @@ textarea {
 
     .contact h2 {
         font-size: 56px;
+    }
+
+    .about-intro {
+        display: flex;
+        gap: 30px;
+    }
+
+    .team-members {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    .about-section-review {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) !important;
     }
 }
 
@@ -1060,6 +1193,10 @@ textarea {
         padding: 7rem 6rem;
     }
 
+    .about-main {
+        padding: 0 5rem;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 990px) {
@@ -1088,6 +1225,15 @@ textarea {
 
     .contact-wrapper {
         padding: 7rem 6rem;
+    }
+
+    .team-members {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-section-review {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
