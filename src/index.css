@@ -244,7 +244,7 @@ li a:hover, li:hover {
     display: block;
 }
 
-.arrow {
+.list-arrow {
     transform: translate(5px, 2px)!important;
     display: inline-block;
 }
@@ -348,7 +348,6 @@ li a:hover, li:hover {
     margin: 10px auto;
     padding: 0 10px;
 }
-
 
 .search-form button {
     font-size: 15px;
@@ -991,6 +990,513 @@ textarea {
     grid-gap: 20px;
 }
 
+.dashboard {
+    padding: 3rem 1rem;
+    background: #fff;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.dashboard-right-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dashboard-sections {
+    box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 10%);
+    border-radius: 2px;
+}
+
+.dashboard-sections ul {
+    padding: 1.3rem 1.6rem;
+}
+
+.dashboard-sections li {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+}
+
+.dashboard-sections li span {
+    background: #F4F7F9;
+    float: right;
+    font-size: 10px;
+    border-radius: 8px;
+    padding: 3px 8px;
+    color: #84919B;
+
+}
+
+.dashboard-sections .active {
+    background: #5672f9;
+    color: #fff;
+}
+
+.dashboard-sections li i {
+    margin-right: 5px;
+}
+
+.user-info {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 2rem;
+    box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 10%);
+    padding: 25px 30px 30px;
+    border-radius: 2px;
+}
+
+.user-info img {
+    width: 7rem;
+    height: 7rem;
+    border: 5px solid #F4F7F9;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.edit-btn {
+    background: #5672f9;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.user-info p {
+    color: #888;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.dashboard-left-panel {
+    width: 100%;
+}
+
+.dashboard-right-panel {
+    padding: 1.5rem 1rem;
+    box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 10%);
+    border-radius: 2px;
+}
+
+.empty-ads {
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    margin: 10px auto -10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-right-panel h3 {
+    font-size: 16px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 0.75rem 0.2rem;
+    border-bottom: 2px solid #dedede;
+    border-top: 1px solid #dedede;
+    text-align: center;
+}
+
+td {
+    padding: 2rem 0rem;
+    border-top: 1px solid #dedede;
+}
+
+td img {
+    width: 100%;
+    height: auto;
+}
+
+.product-title {
+    width: 40%;
+}
+
+.product-title strong {
+    color: #666;
+}
+
+.product-title span, .product-title time{
+    color: #848484;
+}
+
+.product-title div {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+
+.product-title h4 {
+    font-size: 0.8rem;
+}
+
+.image-td {
+    width: 20%;
+}
+
+.action {
+    text-align: center;
+}
+
+.action-btn {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #363b4d;
+    background-color: #f7f7f7;
+}
+
+.action li {
+    display: inline-block;
+    margin: 2px;
+}
+
+.product-category {
+    text-transform: capitalize;
+}
+
+.action-btn:hover {
+    color: inherit;
+}
+
+span.active, 
+span.pending, 
+span.rejected {
+    text-transform: capitalize;
+}
+
+span.active {
+    color: rgb(4, 199, 4);
+}
+
+.fa-eye-wrapper:hover {
+    background-color: rgb(4, 199, 4);
+    color: white;
+}
+
+span.pending{
+    color: #007bff;
+}
+
+.fa-pencil-wrapper:hover{
+    background-color: #007bff;
+    color: white;
+}
+
+span.rejected, .fa-trash-wrapper:hover{
+    color: #dc3545;
+}
+
+.fa-trash-wrapper:hover{
+    background-color: #dc3545;
+    color: white;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.125);
+    padding: 2rem
+}
+.modal-wrapper {
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.yes-btn, .no-btn {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    width: 5rem;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.yes-btn {
+    background-color: #dc3545;
+}
+
+.no-btn {
+    background-color: #363839;
+}
+/*
+    =============== 
+    Very Small SS Styles
+    ===============
+*/
+
+@media (max-width: 320px){
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 80%;
+        height: auto;
+    }
+
+    .nav-header {
+        padding: 1rem 1rem;
+        flex-direction: column;
+    }
+
+    .toggle-icon {
+        width: 7%;
+        height: 7%;
+        padding: 0;
+        border: none;
+    }
+
+    .ad-section h2, .categories h3 {
+        font-size: 24px;
+    }
+
+    .footer-bottom {
+        padding: 25px 0;
+    }
+
+    th {
+        font-size: 0.5rem;
+        padding: 0.75rem 0;
+    }
+
+    .product-title h4, .product-title div{
+        font-size: 0.5rem;
+    }
+
+    td {
+        font-size: 0.5rem;
+        padding: 2rem 0;
+    }
+
+    .dashboard-sections li {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .popular-category-list li {
+        margin-top: 0.2rem;
+    }
+
+    .category-list {
+        grid-template-columns: 1fr;
+    }
+
+    .show-btn {
+        display: block;
+    }
+
+    .call-to-action {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .listing-btn {
+        width: 8rem;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .footer-app-store-top {
+        font-size: 13px;
+    }
+
+    .action-btn {
+        height: 20px;
+        width: 20px;
+    }
+
+    .action-btn i {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 580px) {
+    .footer-top {
+        padding: 4rem 5rem;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        padding: 25px 5rem 0;
+    }
+
+    .footer-bottom ul {
+        padding-right: 0;
+    }
+
+    .footer-bottom li {
+        padding: 0 10px;
+    }
+
+    .contact-wrapper {
+        padding: 7rem 6rem;
+    }
+
+    .team-members {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-section-review {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard {
+        padding: 3rem 3rem;
+    }
+}
+
+@media (min-width: 768px){
+    .search-form {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr auto;
+        gap: 10px;
+        transform: translate(-50%, 50%);
+    }
+
+    .search-form button {
+        width: auto;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    .ad-section {
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+
+    .footer-top {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 
+            'x x x x x x x x y y y y'
+            'a a a z z z z z z z z z';
+    }
+
+    .info {
+        grid-area: x;
+    }
+
+    .site {
+        grid-area: y;
+    }
+
+    .admin {
+        grid-area: a;
+    }
+    
+    .footer-app-store {
+        grid-area: z;
+    }
+
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+    .contact-wrapper {
+        padding: 7rem 6rem;
+    }
+
+    .about-main {
+        padding: 0 5rem;
+    }
+
+    .dashboard {
+        padding: 3rem 7rem;
+    }
+
+    .product-title div {
+        flex-direction: row;
+    }
+
+    .product-title strong {
+        flex-basis: 30%;
+    }
+
+    .dashboard-right-panel {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (min-width: 479px) and (max-width: 990px){
+    .slide {
+        width: 48.5%;
+    }
+
+    .last, .next {
+        translate: calc(200% + 50px);
+    }
+
+    .second {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .hero {
+        min-height: 40vh;
+    }
+}
+
+@media (min-width: 912px) and (max-width: 990px){
+    .hero-content h1 {
+        font-size: 65px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+}
+
 /*
     =============== 
     Desktop Styles
@@ -1057,7 +1563,7 @@ textarea {
         z-index: 2;
     }
 
-    .link {
+    .link, span {
         display: inline-block;
         position: relative;
     }
@@ -1133,197 +1639,25 @@ textarea {
         display: grid;
         grid-template-columns: repeat(4, 1fr) !important;
     }
-}
 
-@media (min-width: 768px){
-    .search-form {
+    .dashboard-wrapper {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        grid-template-columns: 1fr 1fr 1fr auto;
-        gap: 10px;
-        transform: translate(-50%, 50%);
     }
 
-    .search-form button {
-        width: auto;
+    .dashboard {
+        padding: 3rem 5rem;
     }
 
-    .form-control {
-        width: 100%;
+    .dashboard-left-panel {
+        flex-basis: 30%;
     }
 
-    .ad-section {
-        margin-right: 5rem;
-        margin-left: 5rem;
+    .dashboard-right-panel {
+        flex-basis: 70%;
     }
 
-    .footer-top {
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-areas: 
-            'x x x x x x x x y y y y'
-            'a a a z z z z z z z z z';
-    }
-
-    .info {
-        grid-area: x;
-    }
-
-    .site {
-        grid-area: y;
-    }
-
-    .admin {
-        grid-area: a;
-    }
-    
-    .footer-app-store {
-        grid-area: z;
-    }
-
-    .contact-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 50px;
-    }
-
-    .contact-wrapper {
-        padding: 7rem 6rem;
-    }
-
-    .about-main {
-        padding: 0 5rem;
-    }
-
-}
-
-@media (min-width: 768px) and (max-width: 990px) {
-    .hero {
-        min-height: 40vh;
-    }
-}
-
-@media (min-width: 580px) {
-    .footer-top {
-        padding: 4rem 5rem;
-    }
-
-    .footer-bottom {
-        flex-direction: row;
-        padding: 25px 5rem 0;
-    }
-
-    .footer-bottom ul {
-        padding-right: 0;
-    }
-
-    .footer-bottom li {
-        padding: 0 10px;
-    }
-
-    .contact-wrapper {
-        padding: 7rem 6rem;
-    }
-
-    .team-members {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-section-review {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 479px) and (max-width: 990px){
-    .slide {
-        width: 48.5%;
-    }
-
-    .last, .next {
-        translate: calc(200% + 50px);
-    }
-
-    .second {
-        opacity: 1;
-    }
-}
-
-@media (min-width: 912px) and (max-width: 990px){
-    .hero-content h1 {
-        font-size: 65px;
-    }
-
-    .hero-content p {
-        font-size: 20px;
-    }
-}
-
-/*
-    =============== 
-    Very Small SS Styles
-    ===============
-*/
-@media (max-width: 320px){
-    .logo {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .logo img {
-        width: 80%;
-        height: auto;
-    }
-
-    .nav-header {
-        padding: 1rem 1rem;
-        flex-direction: column;
-    }
-
-    .toggle-icon {
-        width: 7%;
-        height: 7%;
-        padding: 0;
-        border: none;
-    }
-
-    .ad-section h2, .categories h3 {
-        font-size: 24px;
-    }
-
-    .footer-bottom {
-        padding: 25px 0;
-    }
-}
-
-@media (max-width: 375px) {
-    .popular-category-list li {
-        margin-top: 0.2rem;
-    }
-
-    .category-list {
-        grid-template-columns: 1fr;
-    }
-
-    .show-btn {
-        display: block;
-    }
-
-    .call-to-action {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .listing-btn {
-        width: 8rem;
-        font-size: 14px;
-        padding: 12px;
-    }
-
-    .footer-app-store-top {
-        font-size: 13px;
+    .modal-wrapper {
+        padding: 3rem;
     }
 }

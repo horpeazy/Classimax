@@ -19,7 +19,8 @@ const Navbar = () => {
         } 
     }
 
-    const menuHandler = () => {
+    const menuHandler = (e) => {
+        e.preventDefault();
         if (window.innerWidth < 990){
             setShowSubmenu(!showSubmenu);
         }
@@ -55,10 +56,9 @@ const Navbar = () => {
                                 onMouseOver={showSubLink} 
                                 onMouseLeave={() => {setShowSubmenu(false)}}
                             >
-                                {/* TODO: change list to another element */}
-                                <li onClick={menuHandler}>
-                                    Listing<i className='fa fa-angle-down arrow' />
-                                </li>
+                                <a onClick={menuHandler} href="/">
+                                    Listing<i className='fa fa-angle-down list-arrow'/>
+                                </a>
                                 <ul 
                                     className={`sub-link ${showSubmenu && 'show'}`}
                                 >

@@ -1,8 +1,8 @@
 import React from 'react';
-import Feedback from '../components/Feedback';
 import { feedbackData } from '../data';
 
 const About = () => {
+    // const counterBoxRef = useRef(null);
     return (
         <section className='about-section'>
             <div className='about-header'>
@@ -68,16 +68,15 @@ const About = () => {
                 </div>
             </div>
             <div className='about-section-review'>
-                {feedbackData.map((data, index) => {
-                    return (
-                        <Feedback
-                            key={index} 
-                            icon={data.icon} 
-                            maxcount={data.value} 
-                            content={data.category}
-                        />
-                    )
-                })}
+                    {feedbackData.map((data, index) => {
+                        return (
+                            <div className='feedback' key={index}>
+                                <i className={`fa ${data.icon}`}></i>
+                                <span className='counter' data-count={data.value}>0</span>
+                                <h5>{data.category}</h5>
+                            </div>
+                        )
+                    })}
             </div>
         </section>
     )
