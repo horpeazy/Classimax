@@ -1257,6 +1257,75 @@ span.rejected, .fa-trash-wrapper:hover{
 .no-btn {
     background-color: #363839;
 }
+
+.package {
+    text-align: center;
+    background: #F5F5F5;
+    padding: 100px 0;
+
+}
+
+.package h2 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.package section {
+    margin: 0 15px;
+}
+
+.package-detail {
+    border: 1px solid red;
+    padding: 3rem;
+    margin-top: .5rem;
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    transition: all linear 0.3s;
+}
+
+.package-detail i {
+    font-size: 50px;
+    padding-bottom: 25px;
+    color: #5672f9;
+}
+
+.package-detail:hover {
+    box-shadow: var(--light-shadow);
+}
+
+.package-content-top {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.package-content-top h3 {
+    font-size: 25px;
+}
+
+.package-content-top h4 {
+    font-size: 18px;
+    padding: 0.75rem 0;
+}
+
+.package-detail ul li {
+    padding: 0.75rem 0;
+    font-size: 14px;
+}
+
+.buy-btn {
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    text-decoration: none;
+}
 /*
     =============== 
     Very Small SS Styles
@@ -1313,6 +1382,8 @@ span.rejected, .fa-trash-wrapper:hover{
         font-size: 0.7rem;
     }
 }
+
+
 
 @media (max-width: 375px) {
     .popular-category-list li {
@@ -1464,6 +1535,16 @@ span.rejected, .fa-trash-wrapper:hover{
 
     .dashboard-right-panel {
         padding: 1.5rem 2rem;
+    }
+
+    .package section {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 50px;
+    }
+
+    .package-detail {
+        width: 30%;
     }
 }
 
